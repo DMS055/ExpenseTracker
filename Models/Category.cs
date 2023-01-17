@@ -12,9 +12,9 @@ namespace ExpenseTrackerDOTNET.Models
         public string Title { get; set; }
 
         [Column(TypeName = "navchar(5)")]
-        public string Icon { get; set; }
+        public string Icon { get; set; } = "";
 
         [Column(TypeName = "navchar(10)")]
-        public string Type { get; set; }
+        public string Type { get; set; } = "Expense";
     }
 }
