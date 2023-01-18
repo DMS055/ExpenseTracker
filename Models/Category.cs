@@ -8,13 +8,13 @@ namespace ExpenseTrackerDOTNET.Models
         [Key]
         public int CategoryId { get; set; }
 
-        [Column(TypeName = "navchar(50)")]
+        [Column(TypeName = "nvarchar(50)")]
         public string Title { get; set; }
 
-        [Column(TypeName = "navchar(5)")]
+        [Column(TypeName = "nvarchar(5)")]
         public string Icon { get; set; } = "";
 
-        [Column(TypeName = "navchar(10)")]
+        [Column(TypeName = "nvarchar(10)")]
         public string Type { get; set; } = "Expense";
     }
 }
