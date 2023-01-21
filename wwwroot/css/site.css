@@ -43,3 +43,8 @@ body {
     color: #212b36;
     border: 1px solid #fff;
 }
+
+.widget {
+    border-radius: 1rem;
+    background-color: #1a222b;
+}
