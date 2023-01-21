@@ -4,14 +4,11 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Category</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+<div class="row d-flex align-items-center justify-content-center align-middle">
+    <div class="col-md-9">
+        <form asp-action="AddOrEdit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" name="CategoryId" value="CategoryId" />
             <div class="mb-3">
                 <div class='e-btn-group custom-rbt-group'>
                     <input type="radio" id="radioleft" name="align" value="Expense" checked="@(Model.Type=="Expense")" />
@@ -28,16 +25,15 @@
                 <ejs-textbox id="icon" placeholder="Icon" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
                 <span asp-validation-for="Icon" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+            <ejs-button id="submit" style="width: 15%;" type="submit" content="Submit" cssClass="e-success"></ejs-button>
         </form>
+        <div class="mt-2">
+            <a asp-action="Index">Back to List</a>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

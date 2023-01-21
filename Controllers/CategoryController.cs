@@ -42,7 +42,7 @@ namespace ExpenseTrackerDOTNET.Controllers
             return View(category);
         }
 
-        // GET: Category/Create
+        // GET: Category/AddOrEdit
         public IActionResult AddOrEdit(int id=0)
         {
             if (id == 0)
