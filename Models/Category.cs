@@ -22,7 +22,7 @@ namespace ExpenseTrackerDOTNET.Models
         {
             get
             {
-                return this.Icon+ " " +this.Title;
+                return this.Icon + " " + this.Title;
             }
         }
     }
