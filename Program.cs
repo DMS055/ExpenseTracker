@@ -9,6 +9,8 @@ builder.Services.AddControllersWithViews();
 // DI
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("@32302e342e30mYMjCJHGfKEFKx8TcPrJHo3fpCXIX/B3Qv77xcZ2FYw=");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
